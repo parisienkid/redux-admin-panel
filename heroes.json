@@ -1,0 +1,35 @@
+{
+  "heroes": [
+    {
+      "id": 1,
+      "name": "Первый герой",
+      "description": "Первый герой в рейтинге!",
+      "element": "Огонь"
+    },
+    {
+      "id": 3,
+      "name": "Морской герой",
+      "description": "Как аквамен, но не из DC",
+      "element": "Вода"
+    },
+    {
+      "id": "a1d509a5-a5eb-4a92-8d3e-1ab7cf38d45d",
+      "name": "Даня",
+      "description": "js, react, redux",
+      "element": "Огонь"
+    },
+    {
+      "id": "bb2d1618-6c9a-46ed-8fdf-02bdfc4c9021",
+      "name": "ehr",
+      "description": "trh",
+      "element": "Огонь"
+    }
+  ],
+  "filters": [
+    "Все",
+    "Огонь",
+    "Вода",
+    "Ветер",
+    "Земля"
+  ]
+}

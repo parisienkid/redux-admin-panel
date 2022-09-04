@@ -1,17 +1,15 @@
-import  {fetchFiltres, changeFilterStatus} from '../../actions';
+import { fetchFilters, filterChangeStatus } from '../../reducers/filtersSlice';
 import { useEffect} from 'react';
-import { useHttp } from '../../hooks/http.hook';
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
 
 const HeroesFilters = () => {
 
-    const {request} = useHttp();
     const dispatch = useDispatch();
     const {filters, filter} = useSelector(state => state.filters);
 
     useEffect(() => {
-        dispatch(fetchFiltres(request));
+        dispatch(fetchFilters());
     }, []);
 
 
@@ -45,7 +43,7 @@ const HeroesFilters = () => {
                         filters.length > 0
                         ?
                         filters.map(item => {
-                            return <button key={v4()} onClick={() => dispatch(changeFilterStatus(item))}  className={`${btnFilterClass(item)}${ btnActiveClass(filter, item)}`}>{item}</button>
+                            return <button key={v4()} onClick={() => dispatch(filterChangeStatus(item))}  className={`${btnFilterClass(item)}${ btnActiveClass(filter, item)}`}>{item}</button>
                         })
                         :
                         null
